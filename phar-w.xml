@@ -1,0 +1,11 @@
+
+<property file="phar-w.properties" />
+
+
+
+<copy todir="${PW_EGRESS_DIR}">
+	<!-- Retrieve files which changed since last succesful weaving -->
+	<fileset dir="${src.dir}" includes="**">
+		<date datetime="01/01/2001 12:00 AM" when="before"/>
+	</fileset>
+</copy>
